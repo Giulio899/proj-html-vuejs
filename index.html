@@ -17,382 +17,509 @@
 
 </head>
 <body>
+  <div id="app">
 
-  <header>
-    <!-- inizio header top -->
-    <div class="header-top">
-      <div class="container">
-        <!-- left -->
-        <div class="left">
-          <!-- orari -->
-          <div class="orari">
-            <i class="fas fa-clock"></i>
-            <p>Open Hours: Mon - Sat - 9:00 - 18:00</p>
-          </div>
-        </div>
-        <!-- right -->
-        <div class="right">
-          <!-- telefono -->
-          <div class="telefono">
-            <i class="fas fa-phone-alt"></i>
-            <p>+1(305)1234-5678</p>
-          </div>
-          <!-- mail -->
-          <div class="mail">
-            <i class="fas fa-envelope"></i>
-            <p>hello@example.com</p>
-          </div>
-          <!-- facebook -->
-          <i class="fab fa-facebook-f"></i>
-          <!-- twitter -->
-          <i class="fab fa-twitter"></i>
-          <!-- linkedin -->
-          <i class="fab fa-linkedin-in"></i>
-        </div>
-      </div>
-    </div>
-    <!-- /header top -->
-
-
-
-
-    <!-- Inizio jumbotron -->
-    <div class="jumbotron">
-
-      <!-- immagine jumbotron -->
-      <img src="img/bg-2.jpg" alt="">
-
-      <!-- menu principale -->
-      <div class="container">
-        <nav>
+    <header>
+      <!-- inizio header top -->
+      <div class="header-top" id="top">
+        <div class="container">
           <!-- left -->
           <div class="left">
-            <div class="logo"><a href="#"><span>Nex</span> Gen</a></div>
+            <!-- orari -->
+            <div class="orari">
+              <i class="fas fa-clock"></i>
+              <p @click="add">Open Hours: Mon - Sat - 9:00 - 18:00</p>
+            </div>
           </div>
           <!-- right -->
           <div class="right">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#"><i class="far fa-user"></i></a></li>
-              <li><a href="#" class="btn full slide-effect">Get in touch</a></li>
-            </ul>
+            <!-- telefono -->
+            <div class="telefono">
+              <i class="fas fa-phone-alt"></i>
+              <p>+1(305)1234-5678</p>
+            </div>
+            <!-- mail -->
+            <div class="mail">
+              <i class="fas fa-envelope"></i>
+              <p>hello@example.com</p>
+            </div>
+            <!-- facebook -->
+            <i class="fab fa-facebook-f"></i>
+            <!-- twitter -->
+            <i class="fab fa-twitter"></i>
+            <!-- linkedin -->
+            <i class="fab fa-linkedin-in"></i>
           </div>
-        </nav>
-      </div>
-
-      <!-- testo sopra a jumbotron -->
-      <div class="jumbotron-text">
-        <h1>Financial Risk</h1>
-        <p>The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
-        <a href="#" class="btn full slide-effect">Get in touch</a>
-        <a href="#" class="btn empty color-effect">Read more</a>
-      </div>
-    </div>
-    <!-- /jumbotron -->
-  </header>
-
-  <main>
-    <!-- fascia 1 -->
-    <div class="advisory-performance">
-      <div class="text">
-        <small>Introduction Video</small>
-        <h2>Advisory <span>Performance</span></h2>
-        <p>Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
-        <div class="box-image">
-          <img src="img/video-1.jpg" alt="Video Do Something Great">
-          <i class="fas fa-play green"></i>
-          <i class="fas fa-play white"></i>
         </div>
       </div>
-    </div>
-    <!-- /fascia 1 -->
+      <!-- /header top -->
 
-    <!-- fascia 2 -->
-    <div class="results">
-      <div class="layer">
+
+
+
+      <!-- Inizio jumbotron -->
+      <div class="jumbotron">
+
+        <!-- immagine jumbotron -->
+        <img src="img/bg-2.jpg" alt="">
+
+        <!-- menu principale -->
+        <div class="container">
+          <nav>
+            <!-- left -->
+            <div class="left">
+              <div class="logo"><a href="#"><span>Nex</span> Gen</a></div>
+            </div>
+            <!-- right -->
+            <div class="right">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#"><i class="far fa-user"></i></a></li>
+                <li><a href="#" class="btn full slide-effect">Get in touch</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <!-- testo sopra a jumbotron -->
+        <div class="jumbotron-text">
+          <h1>Financial Risk</h1>
+          <p>The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
+          <a href="#" class="btn full slide-effect">Get in touch</a>
+          <a href="#" class="btn empty color-effect">Read more</a>
+        </div>
+      </div>
+      <!-- /jumbotron -->
+    </header>
+
+    <main>
+      <!-- fascia 1 -->
+      <div class="advisory-performance">
         <div class="text">
-          <!-- titoli -->
-          <small>What are we doing</small>
-          <h2><span>Results</span> in Numbers</h2>
-          <!-- box container -->
+          <small>Introduction Video</small>
+          <h2>Advisory <span>Performance</span></h2>
+          <p>Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
+          <div class="box-image">
+            <img src="img/video-1.jpg" alt="Video Do Something Great">
+            <i class="fas fa-play green"></i>
+            <i class="fas fa-play white"></i>
+          </div>
+        </div>
+      </div>
+      <!-- /fascia 1 -->
+
+      <!-- fascia 2 -->
+      <div class="results">
+        <div class="layer">
+          <div class="text">
+            <!-- titoli -->
+            <small>What are we doing</small>
+            <h2><span>Results</span> in Numbers</h2>
+            <!-- box container -->
+            <div class="box-container">
+              <!-- item1 -->
+              <div class="box">
+                <h3>128</h3>
+                <h4>Certifications</h4>
+              </div>
+              <!-- item2 -->
+              <div class="box">
+                <h3>230</h3>
+                <h4>Employees</h4>
+              </div>
+              <!-- item3 -->
+              <div class="box">
+                <h3>517</h3>
+                <h4>Customers</h4>
+              </div>
+              <!-- item4 -->
+              <div class="box">
+                <h3>94</h3>
+                <h4>Countries Served</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /fascia 2 -->
+
+      <!-- fascia 3 -->
+      <div class="business-areas">
+        <div class="container">
+          <div class="text">
+            <small>Our Business Areas</small>
+            <h2>Excellence in <span>Services</span></h2>
+            <div class="block">
+              <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.</p>
+              <div class="button">
+                <a href="#" class="btn empty color-effect">See all</a>
+              </div>
+            </div>
+            <div class="box-container">
+              <!-- item 1 -->
+              <div class="box">
+                <div class="icons">
+                  <i class="fas fa-network-wired"></i>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <h3>Audit & Assurance</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <!-- item 2 -->
+              <div class="box">
+                <div class="icons">
+                  <i class="fas fa-suitcase"></i>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <h3>Financial Advisory</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <!-- item 3 -->
+              <div class="box">
+                <div class="icons">
+                  <i class="fas fa-chart-bar"></i>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <h3>Analytics and M&A</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <!-- item 4 -->
+              <div class="box">
+                <div class="icons">
+                  <i class="fas fa-plane"></i>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <h3>Middle Marketing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <!-- item 5 -->
+              <div class="box">
+                <div class="icons">
+                  <i class="fas fa-globe-americas"></i>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <h3>Legal Marketing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <!-- item 6 -->
+              <div class="box">
+                <div class="icons">
+                  <i class="fas fa-inbox"></i>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <h3>Regulatory Risk</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /fascia 3 -->
+
+      <!-- fascia 4 -->
+      <div class="team">
+        <div class="container">
+          <!-- left -->
+          <div class="main-content">
+            <div class="text">
+              <small>We like what we do</small>
+              <h2><span>Team</span> of Experts</h2>
+              <p>Ethics and integrity are the bases on which our professionals build their careers. <br> They are fundamentals that become daily attitudes.</p>
+            </div>
+            <div class="box-container">
+              <!-- box 1 -->
+              <div class="box">
+                <img src="img/team-1.jpg" alt="Membro del team">
+                <div class="person-info">
+                  <h4>David Cooper</h4>
+                  <small>Cto & co-founder</small>
+                  <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- box 2 -->
+              <div class="box">
+                <img src="img/team-2.jpg" alt="Membro del team">
+                <div class="person-info">
+                  <h4>Oliver Jones</h4>
+                  <small>Chief procurement</small>
+                  <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- box 3 -->
+              <div class="box">
+                <img src="img/team-3.jpg" alt="Membro del team">
+                <div class="person-info">
+                  <h4>Emma Lopez</h4>
+                  <small>Chief marketing</small>
+                  <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- box 4 -->
+              <div class="box">
+                <img src="img/team-4.jpg" alt="Membro del team">
+                <div class="person-info">
+                  <h4>T. Johnson</h4>
+                  <small>Ceo & president</small>
+                  <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /box container -->
+          </div>
+          <!-- right -->
+          <aside>
+            <h4>President Speech</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut lacinia diam.</p>
+            <p>Vivamus efficitur et est quis posuere. Nulla sollicitudin vulputate dui, id pretium tortor congue eu. Integer aliquet justo eu quam volutpat ullamcorper.</p>
+            <p>Duis ut hendrerit mauris. Phasellus faucibus ut enim vel tincidunt. Nunc venenatis a dui et laoreet.</p>
+            <div class="cite">
+              <small>T. Johnson</small>
+              <i class="fas fa-quote-right"></i>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <!-- fascia 5 -->
+      <div class="news">
+        <div class="container">
+          <div class="text">
+            <small>Our editorial content</small>
+            <h2>Latest <span>News</span></h2>
+            <div class="block">
+              <p>Every week we publish content about what is best in the business world.</p>
+              <div class="button">
+                <a href="#" class="btn full opacity-effect">See all</a>
+              </div>
+            </div>
+          </div>
           <div class="box-container">
             <!-- item1 -->
-            <div class="box">
-              <h3>128</h3>
-              <h4>Certifications</h4>
+            <div class="box news1">
+              <div class="layer">
+                <h4>Increasing creativity is possible for everyone</h4>
+              </div>
             </div>
             <!-- item2 -->
-            <div class="box">
-              <h3>230</h3>
-              <h4>Employees</h4>
+            <div class="box news2">
+              <div class="layer">
+                <h4>Because market research is part of the business plan</h4>
+              </div>
             </div>
             <!-- item3 -->
-            <div class="box">
-              <h3>517</h3>
-              <h4>Customers</h4>
-            </div>
-            <!-- item4 -->
-            <div class="box">
-              <h3>94</h3>
-              <h4>Countries Served</h4>
+            <div class="box news3">
+              <div class="layer">
+                <h4>Working from home is now a trend</h4>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- /fascia 2 -->
-
-    <!-- fascia 3 -->
-    <div class="business-areas">
-      <div class="container">
-        <div class="text">
-          <small>Our Business Areas</small>
-          <h2>Excellence in <span>Services</span></h2>
-          <div class="block">
-            <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.</p>
-            <div class="button">
-              <a href="#" class="btn empty color-effect">See all</a>
+      <!-- fascia 6 -->
+      <div class="newsletter">
+        <div class="container">
+          <!-- left -->
+          <div class="left">
+            <div class="text">
+              <small>Newsletter</small>
+              <h2><span>Know</span> First</h2>
+              <p>Follow closely and receive content about our company and the news of the current market.</p>
             </div>
           </div>
-          <div class="box-container">
-            <!-- item 1 -->
-            <div class="box">
-              <div class="icons">
-                <i class="fas fa-network-wired"></i>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <h3>Audit & Assurance</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <!-- item 2 -->
-            <div class="box">
-              <div class="icons">
-                <i class="fas fa-suitcase"></i>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <h3>Financial Advisory</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <!-- item 3 -->
-            <div class="box">
-              <div class="icons">
-                <i class="fas fa-chart-bar"></i>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <h3>Analytics and M&A</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <!-- item 4 -->
-            <div class="box">
-              <div class="icons">
-                <i class="fas fa-plane"></i>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <h3>Middle Marketing</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <!-- item 5 -->
-            <div class="box">
-              <div class="icons">
-                <i class="fas fa-globe-americas"></i>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <h3>Legal Marketing</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <!-- item 6 -->
-            <div class="box">
-              <div class="icons">
-                <i class="fas fa-inbox"></i>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <h3>Regulatory Risk</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-
+          <!-- right -->
+          <div class="right">
+            <form>
+              <input type="text" placeholder="Name">
+              <input type="email" placeholder="Email">
+              <a href="#" class="btn full opacity-effect">Subscribe</a>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-    <!-- /fascia 3 -->
+      <!-- fascia 7 -->
+      <div class="contact">
+        <div class="container">
+          <!-- left -->
+          <div class="left">
+            <div class="text">
+              <small>Send a message</small>
+              <h2>Get in <span>Touch</span></h2>
+              <p>We will respond to your message as soon as possible.</p>
+            </div>
+            <form>
+              <input type="text" placeholder="Name">
+              <input type="email" placeholder="Email">
+              <input type="number" placeholder="Phone">
+              <div class="select">
+                <select>
+                  <option disabled>More Info</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                  <option value="">Option 4</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+              </div>
 
-    <!-- fascia 4 -->
-    <div class="team">
-      <div class="container">
-        <!-- left -->
-        <div class="main-content">
-          <div class="text">
-            <small>We like what we do</small>
-            <h2><span>Team</span> of Experts</h2>
-            <p>Ethics and integrity are the bases on which our professionals build their careers. <br> They are fundamentals that become daily attitudes.</p>
+              <textarea rows="5" placeholder="Message"></textarea>
+              <a href="#" class="btn full opacity-effect">Send</a>
+            </form>
           </div>
-          <div class="box-container">
-            <!-- box 1 -->
-            <div class="box">
-              <img src="img/team-1.jpg" alt="Membro del team">
-              <div class="person-info">
-                <h4>David Cooper</h4>
-                <small>Cto & co-founder</small>
-                <div class="social">
-                  <i class="fab fa-facebook-f"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-              </div>
+          <!-- right -->
+          <div class="right">
+            <h3>Example Inc.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="last">Praesent diam lacus, dapibus sed imperdiet consectetur.</p>
+            <div class="icon">
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (305) 1234-5678</span>
             </div>
-            <!-- box 2 -->
-            <div class="box">
-              <img src="img/team-2.jpg" alt="Membro del team">
-              <div class="person-info">
-                <h4>Oliver Jones</h4>
-                <small>Chief procurement</small>
-                <div class="social">
-                  <i class="fab fa-facebook-f"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-              </div>
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+              <span>hello@example.com</span>
             </div>
-            <!-- box 3 -->
-            <div class="box">
-              <img src="img/team-3.jpg" alt="Membro del team">
-              <div class="person-info">
-                <h4>Emma Lopez</h4>
-                <small>Chief marketing</small>
-                <div class="social">
-                  <i class="fab fa-facebook-f"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-              </div>
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Main Avenue, 987</span>
             </div>
-            <!-- box 4 -->
-            <div class="box">
-              <img src="img/team-4.jpg" alt="Membro del team">
-              <div class="person-info">
-                <h4>T. Johnson</h4>
-                <small>Ceo & president</small>
-                <div class="social">
-                  <i class="fab fa-facebook-f"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /box container -->
-        </div>
-        <!-- right -->
-        <aside>
-          <h4>President Speech</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut lacinia diam.</p>
-          <p>Vivamus efficitur et est quis posuere. Nulla sollicitudin vulputate dui, id pretium tortor congue eu. Integer aliquet justo eu quam volutpat ullamcorper.</p>
-          <p>Duis ut hendrerit mauris. Phasellus faucibus ut enim vel tincidunt. Nunc venenatis a dui et laoreet.</p>
-          <div class="cite">
-            <small>T. Johnson</small>
-            <i class="fas fa-quote-right"></i>
-          </div>
-        </aside>
-      </div>
-    </div>
-    <!-- fascia 5 -->
-    <div class="news">
-      <div class="container">
-        <div class="text">
-          <small>Our editorial content</small>
-          <h2>Latest <span>News</span></h2>
-          <div class="block">
-            <p>Every week we publish content about what is best in the business world.</p>
-            <div class="button">
-              <a href="#" class="btn full opacity-effect">See all</a>
-            </div>
-          </div>
-        </div>
-        <div class="box-container">
-          <!-- item1 -->
-          <div class="box news1">
-            <div class="layer">
-              <h4>Increasing creativity is possible for everyone</h4>
-            </div>
-          </div>
-          <!-- item2 -->
-          <div class="box news2">
-            <div class="layer">
-              <h4>Because market research is part of the business plan</h4>
-            </div>
-          </div>
-          <!-- item3 -->
-          <div class="box news3">
-            <div class="layer">
-              <h4>Working from home is now a trend</h4>
-            </div>
+            <a href="#" class="btn empty color-effect">View Map</a>
           </div>
         </div>
       </div>
-    </div>
-    <!-- fascia 6 -->
-    <div class="newsletter">
-      <div class="container">
-        <!-- left -->
-        <div class="left">
-          <div class="text">
-            <small>Newsletter</small>
-            <h2><span>Know</span> First</h2>
-            <p>Follow closely and receive content about our company and the news of the current market.</p>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <!-- footer top -->
+        <div class="container">
+          <!-- col 1 -->
+          <div class="box">
+            <div class="logo"><a href="#"><span>Nex</span> Gen</a></div>
+            <p>A Functional HTML Template for Corporate & Business</p>
+            <div class="icon">
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (305) 1234-5678</span>
+            </div>
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+              <span>hello@example.com</span>
+            </div>
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Main Avenue, 987</span>
+            </div>
+            <a href="#" class="btn empty slide-effect color">Get in touch</a>
+          </div>
+          <!-- col 2 -->
+          <div class="box">
+            <h3>About</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>The Company</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Istitutional</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Social & Events</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Innovation</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Environment</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Technology</a>
+              </li>
+            </ul>
+          </div>
+          <!-- col 3 -->
+          <div class="box">
+            <h3>Services</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Audit & Assurance</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Financial Advisory</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Analytics M&A</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Middle Marketing</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Legal Consulting</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Regulatory Risk</a>
+              </li>
+            </ul>
+          </div>
+          <!-- col 4 -->
+          <div class="box">
+            <h3>Support</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Responsibility</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Terms of Use</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>About Cookies</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Accessibility</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i>Information</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- right -->
-        <div class="right">
-          <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <a href="#" class="btn full opacity-effect">Subscribe</a>
-          </form>
-        </div>
       </div>
-    </div>
-    <!-- fascia 7 -->
-    <div class="contact">
-      <div class="container">
-        <!-- left -->
-        <div class="left">
-          <div class="text">
-            <small>Send a message</small>
-            <h2>Get in <span>Touch</span></h2>
-            <p>We will respond to your message as soon as possible.</p>
+      <!-- footer bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="left">
+            <small>Enjoy the low price. We are tracking any intention of piracy.</small>
           </div>
-          <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="number" placeholder="Phone">
-            <select class="" name="" placeholder="More Info">
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-            </select>
-            <textarea rows="5" placeholder="Message"></textarea>
-            <a href="#" class="btn full opacity-effect">Send</a>
-          </form>
+          <div class="right">
+            <small>&copy;2020 NEXGEN is Proudly Powered by <span>Codings</span>.</small>
+          </div>
         </div>
-        <!-- right -->
-        <div class="right">
-        </div>
+        <!-- freccia per tornare su -->
+        <a href="#top"><i class="fas fa-arrow-up"></i></a>
       </div>
-    </div>
+    </footer>
 
-
-
-
-
-  </main>
-
-  <footer></footer>
+  </div>
 
   <!-- Link JS -->
   <script src="js/script.js" charset="utf-8"></script>

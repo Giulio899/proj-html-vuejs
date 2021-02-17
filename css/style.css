@@ -748,19 +748,62 @@ main .contact .left form {
 }
 
 main .contact .left form input,
-main .contact .left form select {
+main .contact .left form .select {
   flex-basis: calc(50% - 5px);
   background-color: #ececec;
   border: none;
   outline: none;
-  padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
+  padding: 10px;
+}
+
+main .contact .left form .select {
+  padding: 0;
+  position: relative;
 }
 
 main .contact .left form input[type="text"],
 main .contact .left form input[type="number"] {
   margin-right: 10px;
+}
+
+main .contact .left form input[type="number"] {
+  /* per far scomparire le frecce */
+  -moz-appearance:textfield;
+}
+
+/* per far scomparire le frecce */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+
+main .contact .left form select {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  outline: none;
+  background-color: #ececec;
+  border-radius: 5px;
+  color: rgb(110, 110, 110);
+  position: relative;
+  cursor: pointer;
+  /* per far scomparire la freccia */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+main .contact .left form .select .fas {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: rgba(110, 110, 110, 0.7);
+  font-size: .9em;
+  pointer-events: none;
 }
 
 main .contact .left textarea {
@@ -773,18 +816,176 @@ main .contact .left textarea {
   padding: 10px;
 }
 
-
-
-
 main .contact .right {
   flex-basis: calc(30% - 15px);
   margin-left: 15px;
 }
 
+main .contact .right p {
+  color: rgb(110, 110, 110);
+  margin: 10px 0;
+}
 
+main .contact .right p.last {
+  margin-bottom: 20px;
+}
 
-/*
-main .newsletter .container .right {
-  flex-basis: calc(50% - 25px);
-  margin-left: 25px;
+main .contact .right .icon {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+main .contact .right .icon i {
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  background-color: #daeced;
+  color: #0c868d;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+main .contact .right .icon span {
+  color: #0c868d;
+  font-size: .9em;
+}
+
+main .contact .right .btn {
+  color: #0c868d;
+}
+
+main .contact .right .btn:hover {
+  color: white;
+  background-color: #0c868d;
+  border: 1px solid #0c868d;
+}
+/* /main */
+
+/* Inizio Footer */
+footer {
+  color: rgb(190, 190, 190);
+}
+
+/* footer top */
+footer .footer-top .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .footer-top {
+  background-image: url('../img/bg-7.jpg');
+  background-size: cover;
+  padding: 80px 0;
+}
+
+footer .footer-top .box {
+  flex-basis: calc(100% / 4 - 15px);
+}
+
+footer .box .logo {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+footer .box .logo span {
+  color: #04bebe;
+  padding: 8px 5px 8px 20px;
+  background-color: rgba(0, 166, 166, 0.2);
+  border-radius: 30px 0 0 30px;
+}
+
+footer .box p {
+  margin: 20px 0;
+}
+
+footer .box .icon {
+  cursor: pointer;
+}
+
+footer .box .icon:hover {
+  color: white;
+}
+
+footer .box .icon span {
+  display: inline-block;
+  font-size: .85em;
+  margin: 7px 0;
+}
+
+footer .box a {
+  margin-top: 20px;
+}
+
+footer .footer-top .box:not(:first-of-type) {
+  background-color: rgba(190, 190, 190, 0.05);
+  padding: 35px 30px;
+  border-radius: 8px;
+}
+
+footer .footer-top .box:not(:first-of-type) h3 {
+  margin-bottom: 20px;
+}
+
+footer .footer-top .box:not(:first-of-type) li {
+  font-size: .8em;
+  margin-bottom: 10px;
+}
+
+footer .footer-top .box:not(:first-of-type) li .fa-chevron-right {
+  margin-right: 5px;
+}
+
+footer .footer-top .box:not(:first-of-type) li a {
+  color: rgb(190, 190, 190);
+}
+
+footer .container .box:not(:first-of-type) li a:hover {
+  color: white;
+}
+
+footer .container .box:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+/* footer bottom */
+.footer-bottom {
+  background-color: #060a0c;
+  padding: 20px 0;
+  position: relative;
+}
+
+.footer-bottom .container {
+  display: flex;
+}
+
+.footer-bottom .container .left,
+.footer-bottom .container .right {
+  flex-basis: 50%;
+}
+
+.footer-bottom .container .right {
+  text-align: right;
+}
+
+.footer-bottom .container .right small span {
+  color: #058283;
+}
+
+/* freccia per tornare su */
+.footer-bottom .fa-arrow-up {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+  background-color: rgba(150, 150, 150, 0.1);
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }

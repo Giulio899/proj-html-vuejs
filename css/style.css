@@ -114,7 +114,6 @@ header .header-top {
 header .header-top .container {
   height: 100%;
   display: flex;
-
 }
 
 /* header top left */
@@ -122,13 +121,25 @@ header .header-top .left {
   height: 100%;
 }
 
-header .header-top .left .orari {
+header .header-top .left .opening {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-header .header-top .left .orari .fa-clock {
+header .header-top .left a,
+header .header-top .right a {
+  color: rgb(190, 190, 190);
+  transition: color .2s;
+  cursor: pointer;
+}
+
+header .header-top .left a:hover,
+header .header-top .right a:hover {
+  color: white;
+}
+
+header .header-top .left .opening .fa-clock {
   margin-right: 5px;
 }
 
@@ -140,13 +151,13 @@ header .header-top .right {
   justify-content: flex-end;
 }
 
-header .header-top .right .telefono,
+header .header-top .right .telephone,
 header .header-top .right .mail {
   display: flex;
   align-items: center;
 }
 
-header .header-top .right .telefono,
+header .header-top .right .telephone,
 header .header-top .right .mail,
 .fa-facebook-f,
 .fa-twitter,
@@ -154,7 +165,7 @@ header .header-top .right .mail,
   margin-left: 20px;
 }
 
-header .header-top .right .telefono .fa-phone-alt,
+header .header-top .right .telephone .fa-phone-alt,
 header .header-top .right .mail .fa-envelope {
   margin-right: 5px;
 }
@@ -230,6 +241,17 @@ header .jumbotron .container nav .right ul {
 header .jumbotron .container nav .right ul li {
   margin-left: 25px;
 }
+
+header .jumbotron .container nav .right ul li:not(:last-of-type) a {
+  color: rgb(220, 220, 220);
+  transition: color .2s;
+}
+
+header .jumbotron .container nav .right ul li a:hover {
+  color: white;
+}
+
+
 
 /* Inizio main */
 

@@ -25,37 +25,25 @@
         <div class="container">
           <!-- left -->
           <div class="left">
-            <!-- orari -->
-            <div class="orari">
-              <i class="fas fa-clock"></i>
-              <p @click="add">Open Hours: Mon - Sat - 9:00 - 18:00</p>
-            </div>
+            <!-- orari presi da array -->
+            <a href="#" :class="contact[0].type">
+              <i :class="contact[0].icon"></i>
+              <small>{{ contact[0].info }}</small>
+            </a>
           </div>
           <!-- right -->
           <div class="right">
-            <!-- telefono -->
-            <div class="telefono">
-              <i class="fas fa-phone-alt"></i>
-              <p>+1(305)1234-5678</p>
-            </div>
-            <!-- mail -->
-            <div class="mail">
-              <i class="fas fa-envelope"></i>
-              <p>hello@example.com</p>
-            </div>
-            <!-- facebook -->
-            <i class="fab fa-facebook-f"></i>
-            <!-- twitter -->
-            <i class="fab fa-twitter"></i>
-            <!-- linkedin -->
-            <i class="fab fa-linkedin-in"></i>
+            <!-- telefono e mail stampati con v-for -->
+            <a v-for="(item, i) in contact" v-if="i > 0 && i < 3" :class="item.type">
+              <i :class="item.icon"></i>
+              <small>{{ item.info }}</small>
+            </a>
+            <!-- social (fb, twitter e linkedin) stampati con v-for -->
+            <a v-for="item in social" :href="item.url"><i :class="item.icon"></i></a>
           </div>
         </div>
       </div>
       <!-- /header top -->
-
-
-
 
       <!-- Inizio jumbotron -->
       <div class="jumbotron">
@@ -73,11 +61,7 @@
             <!-- right -->
             <div class="right">
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Blog</a></li>
+                <li v-for="item in menuItems"><a :href="item.url">{{ item.name }}</a></li>
                 <li><a href="#"><i class="far fa-user"></i></a></li>
                 <li><a href="#" class="btn full slide-effect">Get in touch</a></li>
               </ul>
@@ -416,92 +400,24 @@
           <div class="box">
             <div class="logo"><a href="#"><span>Nex</span> Gen</a></div>
             <p>A Functional HTML Template for Corporate & Business</p>
-            <div class="icon">
-              <i class="fas fa-phone-alt"></i>
-              <span>+1 (305) 1234-5678</span>
+            <!-- info di contatto stampate con v-for -->
+            <div class="icon" v-for="(item, i) in contact" v-if="i > 0">
+              <i :class="item.icon"></i>
+              <span>{{ item.info }}</span>
             </div>
-            <div class="icon">
-              <i class="fas fa-envelope"></i>
-              <span>hello@example.com</span>
-            </div>
-            <div class="icon">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Main Avenue, 987</span>
-            </div>
+            <!-- button -->
             <a href="#" class="btn empty slide-effect color">Get in touch</a>
           </div>
-          <!-- col 2 -->
-          <div class="box">
-            <h3>About</h3>
+          <!-- col 2, 3 e 4 stampate con v-for -->
+          <div class="box" v-for="item in footerInfo">
+            <h3>{{ item.category }}</h3>
             <ul>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>The Company</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Istitutional</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Social & Events</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Innovation</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Environment</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Technology</a>
+              <li v-for="element in item.subcategory">
+                <a :href="element.url"><i class="fas fa-chevron-right"></i>{{ element.name }}</a>
               </li>
             </ul>
           </div>
-          <!-- col 3 -->
-          <div class="box">
-            <h3>Services</h3>
-            <ul>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Audit & Assurance</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Financial Advisory</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Analytics M&A</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Middle Marketing</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Legal Consulting</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Regulatory Risk</a>
-              </li>
-            </ul>
-          </div>
-          <!-- col 4 -->
-          <div class="box">
-            <h3>Support</h3>
-            <ul>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Responsibility</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Terms of Use</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>About Cookies</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Accessibility</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chevron-right"></i>Information</a>
-              </li>
-            </ul>
-          </div>
+
         </div>
       </div>
       <!-- footer bottom -->

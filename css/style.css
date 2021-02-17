@@ -293,7 +293,38 @@ main .advisory-performance .text p {
 }
 
 main .advisory-performance .box-image {
+  overflow: hidden;
   position: relative;
+}
+
+main .advisory-performance .box-image .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background-color: rgba(38, 115, 116, .1);
+  cursor: pointer;
+  transition: all .2s;
+}
+
+main .advisory-performance .box-image .layer:hover {
+  background-color: rgba(38, 115, 116, .3);
+}
+
+main .advisory-performance .box-image .layer .icons {
+  width: 100%;
+  height: 100%;
+  transition: transform .2s;
+}
+
+main .advisory-performance .box-image .layer:hover .icons {
+  transform: scale(1.1);
+}
+
+main .advisory-performance .box-image .layer .icons {
+  width: 100%;
+  height: 100%;
 }
 
 main .advisory-performance .box-image img {
@@ -308,6 +339,7 @@ main .advisory-performance .box-image .fa-play.white {
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.7);
   font-size: 3.5em;
+  pointer-events: none;
 }
 
 main .advisory-performance .box-image .fa-play.green {
@@ -317,6 +349,7 @@ main .advisory-performance .box-image .fa-play.green {
   transform: translate(-50%, -50%);
   color: rgba(45, 149, 153, 0.7);
   font-size: 3.5em;
+  pointer-events: none;
 }
 
 /* fascia 2 */
@@ -423,6 +456,20 @@ main .business-areas .box {
   background-color: #19191f;
   padding: 40px 25px;
   border-radius: 8px;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+main .business-areas .box:hover {
+  transform: translateY(-10px);
+}
+
+main .business-areas .box:hover .icons .white {
+  transition: color .5s;
+}
+
+main .business-areas .box:hover .icons .white {
+  color: white;
 }
 
 main .business-areas .box:not(:nth-of-type(3n+0)) {
@@ -448,8 +495,9 @@ main .business-areas .box .icons .fa-arrow-right {
   transition: opacity .2s;
 }
 
-main .business-areas .box .icons .fa-arrow-right:hover {
+main .business-areas .box:hover .icons .fa-arrow-right {
   opacity: 1;
+  color: white;
 }
 
 main .business-areas .box .icons .fa-plane {
@@ -543,10 +591,16 @@ main .team .box-container .box .person-info .social .fab {
   border-radius: 50%;
   margin: 0;
   margin-right: 3px;
-  color: #058283;
+  color: #42a1a5;
   padding: 5px;
   cursor: pointer;
   font-size: .9em;
+  transition: all .3s;
+}
+
+main .team .box-container .box .person-info .social .fab:hover {
+  color: #daeced;
+  background-color: #42a1a5;
 }
 
 main .team .container aside {
@@ -630,23 +684,26 @@ main .news .box-container .box {
   height: 285px;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 main .news .box-container .box:not(:last-of-type) {
   margin-right: 20px;
 }
 
-main .news .box-container .box.news1 {
+main .news .box-container .layer.news1 {
   background-image: url('../img/news-1.jpg');
   background-size: cover;
 }
 
-main .news .box-container .box.news2 {
+main .news .box-container .layer.news2 {
   background-image: url('../img/news-2.jpg');
   background-size: cover;
 }
 
-main .news .box-container .box.news3 {
+main .news .box-container .layer.news3 {
   background-image: url('../img/news-3.jpg');
   background-size: cover;
 }
@@ -655,11 +712,62 @@ main .news .box-container .box .layer {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
   display: flex;
   align-items: flex-end;
   border-radius: 10px;
+  transition: all .3s;
+}
+
+main .news .box-container .box:hover .layer {
+  filter: blur(3px) brightness(45%);
+}
+
+main .news .box-container .box .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 0 30px;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -40px);
+  transition: transform .3s;
+}
+
+main .news .box-container .box:hover .top {
+  transform: translate(0, 30px);
+}
+
+main .news .box-container .box .center {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 20px;
+  text-align: center;
+  transform: translate(0, 0);
+  transition: transform .3s;
+}
+
+main .news .box-container .box:hover .center {
+  transform: translate(0, -50px);
+}
+
+main .news .box-container .box .bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0 40px;
+  transform: translate(-50%, 40px);
+  font-weight: 500;
+  transition: transform .3s;
+}
+
+main .news .box-container .box:hover .bottom {
+  transform: translate(-50%, -30px);
 }
 
 /* fascia 6 */
@@ -903,6 +1011,11 @@ footer .footer-top {
 
 footer .footer-top .box {
   flex-basis: calc(100% / 4 - 15px);
+  transition: transform .5s;
+}
+
+footer .footer-top .box:not(:first-of-type):hover {
+  transform: translateY(-10px);
 }
 
 footer .box .logo {
@@ -1010,4 +1123,10 @@ footer .container .box:not(:last-of-type) {
   border-radius: 50%;
   box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.2);
   cursor: pointer;
+  transition: box-shadow .2s; 
+}
+
+.footer-bottom .fa-arrow-up:hover {
+  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.2);
+
 }

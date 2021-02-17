@@ -33,12 +33,12 @@
           </div>
           <!-- right -->
           <div class="right">
-            <!-- telefono e mail stampati con v-for -->
+            <!-- Vue: telefono e mail stampati con v-for -->
             <a v-for="(item, i) in contact" v-if="i > 0 && i < 3" :class="item.type">
               <i :class="item.icon"></i>
               <small>{{ item.info }}</small>
             </a>
-            <!-- social (fb, twitter e linkedin) stampati con v-for -->
+            <!-- Vue: social (fb, twitter e linkedin) stampati con v-for -->
             <a v-for="item in social" :href="item.url"><i :class="item.icon"></i></a>
           </div>
         </div>
@@ -61,8 +61,11 @@
             <!-- right -->
             <div class="right">
               <ul>
+                <!-- Vue: voci di menu stampate con v-for -->
                 <li v-for="item in menuItems"><a :href="item.url">{{ item.name }}</a></li>
+                <!-- icona user -->
                 <li><a href="#"><i class="far fa-user"></i></a></li>
+                <!-- button -->
                 <li><a href="#" class="btn full slide-effect">Get in touch</a></li>
               </ul>
             </div>
@@ -89,8 +92,12 @@
           <p>Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
           <div class="box-image">
             <img src="img/video-1.jpg" alt="Video Do Something Great">
-            <i class="fas fa-play green"></i>
-            <i class="fas fa-play white"></i>
+            <div class="layer">
+              <div class="icons">
+                <i class="fas fa-play green"></i>
+                <i class="fas fa-play white"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -105,25 +112,10 @@
             <h2><span>Results</span> in Numbers</h2>
             <!-- box container -->
             <div class="box-container">
-              <!-- item1 -->
-              <div class="box">
-                <h3>128</h3>
-                <h4>Certifications</h4>
-              </div>
-              <!-- item2 -->
-              <div class="box">
-                <h3>230</h3>
-                <h4>Employees</h4>
-              </div>
-              <!-- item3 -->
-              <div class="box">
-                <h3>517</h3>
-                <h4>Customers</h4>
-              </div>
-              <!-- item4 -->
-              <div class="box">
-                <h3>94</h3>
-                <h4>Countries Served</h4>
+              <!-- Vue: item1,2,3 e 4 stampati con v-for -->
+              <div class="box" v-for="item in results">
+                <h3>{{ item.data }}</h3>
+                <h4>{{ item.title }}</h4>
               </div>
             </div>
           </div>
@@ -144,59 +136,14 @@
               </div>
             </div>
             <div class="box-container">
-              <!-- item 1 -->
-              <div class="box">
+              <!-- Vue: item 1 to 6 stampati con v-for -->
+              <div class="box" v-for="item in services">
                 <div class="icons">
-                  <i class="fas fa-network-wired"></i>
+                  <i :class="item.icon" class="white"></i>
                   <i class="fas fa-arrow-right"></i>
                 </div>
-                <h3>Audit & Assurance</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <!-- item 2 -->
-              <div class="box">
-                <div class="icons">
-                  <i class="fas fa-suitcase"></i>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-                <h3>Financial Advisory</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <!-- item 3 -->
-              <div class="box">
-                <div class="icons">
-                  <i class="fas fa-chart-bar"></i>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-                <h3>Analytics and M&A</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <!-- item 4 -->
-              <div class="box">
-                <div class="icons">
-                  <i class="fas fa-plane"></i>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-                <h3>Middle Marketing</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <!-- item 5 -->
-              <div class="box">
-                <div class="icons">
-                  <i class="fas fa-globe-americas"></i>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-                <h3>Legal Marketing</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-              <!-- item 6 -->
-              <div class="box">
-                <div class="icons">
-                  <i class="fas fa-inbox"></i>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-                <h3>Regulatory Risk</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3>{{ item.name }}</h3>
+                <p> {{ item.description }} </p>
               </div>
 
             </div>
@@ -216,55 +163,14 @@
               <p>Ethics and integrity are the bases on which our professionals build their careers. <br> They are fundamentals that become daily attitudes.</p>
             </div>
             <div class="box-container">
-              <!-- box 1 -->
-              <div class="box">
-                <img src="img/team-1.jpg" alt="Membro del team">
+              <!-- Vue: box 1 to 4 stampati con v-for -->
+              <div class="box" v-for="item in team">
+                <img :src="'img/' + item.image" :alt="item.name">
                 <div class="person-info">
-                  <h4>David Cooper</h4>
-                  <small>Cto & co-founder</small>
+                  <h4>{{ item.name }}</h4>
+                  <small>{{ item.role }}</small>
                   <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-              </div>
-              <!-- box 2 -->
-              <div class="box">
-                <img src="img/team-2.jpg" alt="Membro del team">
-                <div class="person-info">
-                  <h4>Oliver Jones</h4>
-                  <small>Chief procurement</small>
-                  <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-              </div>
-              <!-- box 3 -->
-              <div class="box">
-                <img src="img/team-3.jpg" alt="Membro del team">
-                <div class="person-info">
-                  <h4>Emma Lopez</h4>
-                  <small>Chief marketing</small>
-                  <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-              </div>
-              <!-- box 4 -->
-              <div class="box">
-                <img src="img/team-4.jpg" alt="Membro del team">
-                <div class="person-info">
-                  <h4>T. Johnson</h4>
-                  <small>Ceo & president</small>
-                  <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
+                    <i v-for="element in item.social" :class="element.icon"></i>
                   </div>
                 </div>
               </div>
@@ -299,23 +205,55 @@
           </div>
           <div class="box-container">
             <!-- item1 -->
-            <div class="box news1">
-              <div class="layer">
+            <div class="box">
+
+              <div class="layer news1">
+              </div>
+              <!-- elemento 1 hover fuori dal box -->
+              <div class="top">
+                <small><i class="far fa-user"></i> Andrea Miller</small>
+                <small><i class="far fa-clock"></i> 2 Days Ago</small>
+              </div>
+              <!-- elemento 2 hover fuori dal box -->
+              <div class="center">
                 <h4>Increasing creativity is possible for everyone</h4>
               </div>
+              <!-- elemento 3 hover fuori dal box -->
+              <p class="bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
             <!-- item2 -->
-            <div class="box news2">
-              <div class="layer">
+            <div class="box">
+              <div class="layer news2">
+              </div>
+              <!-- elemento 1 hover fuori dal box -->
+              <div class="top">
+                <small><i class="far fa-user"></i> John Smith</small>
+                <small><i class="far fa-clock"></i> 9 Days Ago</small>
+              </div>
+              <!-- elemento 2 hover fuori dal box -->
+              <div class="center">
                 <h4>Because market research is part of the business plan</h4>
               </div>
+              <!-- elemento 3 hover fuori dal box -->
+              <p class="bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
             <!-- item3 -->
-            <div class="box news3">
-              <div class="layer">
+            <div class="box">
+              <div class="layer news3">
+              </div>
+              <!-- elemento 1 hover fuori dal box -->
+              <div class="top">
+                <small><i class="far fa-user"></i> Andrea Miller</small>
+                <small><i class="far fa-clock"></i> 16 Days Ago</small>
+              </div>
+              <!-- elemento 2 hover fuori dal box -->
+              <div class="center">
                 <h4>Working from home is now a trend</h4>
               </div>
+              <!-- elemento 3 hover fuori dal box -->
+              <p class="bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
+
           </div>
         </div>
       </div>
@@ -374,17 +312,10 @@
             <h3>Example Inc.</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <p class="last">Praesent diam lacus, dapibus sed imperdiet consectetur.</p>
-            <div class="icon">
-              <i class="fas fa-phone-alt"></i>
-              <span>+1 (305) 1234-5678</span>
-            </div>
-            <div class="icon">
-              <i class="fas fa-envelope"></i>
-              <span>hello@example.com</span>
-            </div>
-            <div class="icon">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Main Avenue, 987</span>
+            <!-- Vue: contatti inseriti con v-for -->
+            <div class="icon" v-for="(item, i) in contact" v-if="i > 0">
+              <i :class="item.icon"></i>
+              <span>{{ item.info }}</span>
             </div>
             <a href="#" class="btn empty color-effect">View Map</a>
           </div>
@@ -400,7 +331,7 @@
           <div class="box">
             <div class="logo"><a href="#"><span>Nex</span> Gen</a></div>
             <p>A Functional HTML Template for Corporate & Business</p>
-            <!-- info di contatto stampate con v-for -->
+            <!-- Vue: info di contatto stampate con v-for -->
             <div class="icon" v-for="(item, i) in contact" v-if="i > 0">
               <i :class="item.icon"></i>
               <span>{{ item.info }}</span>
@@ -408,7 +339,7 @@
             <!-- button -->
             <a href="#" class="btn empty slide-effect color">Get in touch</a>
           </div>
-          <!-- col 2, 3 e 4 stampate con v-for -->
+          <!-- Vue: col 2, 3 e 4 stampate con v-for -->
           <div class="box" v-for="item in footerInfo">
             <h3>{{ item.category }}</h3>
             <ul>

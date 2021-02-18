@@ -291,13 +291,36 @@ var app = new Vue({
         ]
       }
     ],
-
-    counter: 1
+    slider: [
+      {
+        title: "Financial Risk",
+        subtitle: "The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.",
+        img: "bg-1.jpg"
+      },
+      {
+        title: "Audit & Assurance",
+        subtitle: "Our focus is to map the technologies to solve the business trasformation, offering services.",
+        img: "bg-2.jpg"
+      },
+      {
+        title: "Business Consulting",
+        subtitle: "We drive product and service innovation, improve financial performance, accelerate market speed.",
+        img: "bg-3.jpg"
+      }
+    ],
+    counter: 0,
+    interval: ''
+  },
+  mounted() {
+    this.interval = setInterval(this.nextPhotoAutomatic, 5000)
   },
   methods: {
-    add() {
-      this.counter++;
-      console.log(this.counter);
-    }
+    changeImage(i) {
+      this.counter = i;
+      clearTimeout(this.interval);
+    },
+    nextPhotoAutomatic() {
+      (this.counter == this.slider.length - 1) ? this.counter = 0 : this.counter++;
+    },
   }
 });

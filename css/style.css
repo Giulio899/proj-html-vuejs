@@ -179,10 +179,39 @@ header .jumbotron {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* transizioni Vue */
+.fade-leave-active,
+.fade-enter-active {
+  transition: opacity .8s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+/* /transizioni Vue */
+
 header .jumbotron img {
   width: 100%;
   position: relative;
   z-index: -1;
+}
+
+header .jumbotron .icon-slider {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translate(0, -50%) rotateZ(90deg);
+  font-size: 2.2em;
+  color: white;
+}
+
+header .jumbotron .icon-slider .fa-window-minimize {
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 0;
+}
+
+header .jumbotron .icon-slider .fa-window-minimize.active {
+  color: #058283;
 }
 
 header .jumbotron .jumbotron-text {
@@ -250,8 +279,6 @@ header .jumbotron .container nav .right ul li:not(:last-of-type) a {
 header .jumbotron .container nav .right ul li a:hover {
   color: white;
 }
-
-
 
 /* Inizio main */
 
@@ -458,6 +485,7 @@ main .business-areas .box {
   border-radius: 8px;
   cursor: pointer;
   transition: transform .5s;
+  position: relative;
 }
 
 main .business-areas .box:hover {
@@ -488,11 +516,46 @@ main .business-areas .box .icons .fas {
   font-weight: 600;
 }
 
+main .business-areas .box .pulse {
+  position: absolute;
+  right: 32px;
+  top: 55px;
+  width: 1px;
+  height: 1px;
+}
+
+main .business-areas .box:hover .pulse {
+  animation: animate 2.5s ease infinite;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(9, 123, 125, 0), 0 0 0 0 rgba(9, 123, 125, .8);
+    border-radius: 50%;
+  }
+  40% {
+    box-shadow: 0 0 0 25px rgba(9, 123, 125, 0), 0 0 0 0 rgba(9, 123, 125, .8);
+    border-radius: 50%;
+
+  }
+  80% {
+    box-shadow: 0 0 0 25px rgba(9, 123, 125, 0), 0 0 0 25px rgba(9, 123, 125, 0);
+    border-radius: 50%;
+
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(9, 123, 125, 0), 0 0 0 25px rgba(9, 123, 125, 0);
+    border-radius: 50%;
+
+  }
+}
+
 main .business-areas .box .icons .fa-arrow-right {
   font-size: 1.1em;
   opacity: .6;
   cursor: pointer;
   transition: opacity .2s;
+  text-align: center;
 }
 
 main .business-areas .box:hover .icons .fa-arrow-right {
@@ -721,6 +784,9 @@ main .news .box-container .box .layer {
 
 main .news .box-container .box:hover .layer {
   filter: blur(3px) brightness(45%);
+}
+
+main .news .box-container .box:hover .layer {
 }
 
 main .news .box-container .box .top {
@@ -1123,7 +1189,7 @@ footer .container .box:not(:last-of-type) {
   border-radius: 50%;
   box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  transition: box-shadow .2s; 
+  transition: box-shadow .2s;
 }
 
 .footer-bottom .fa-arrow-up:hover {

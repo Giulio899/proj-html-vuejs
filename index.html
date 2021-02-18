@@ -49,7 +49,16 @@
       <div class="jumbotron">
 
         <!-- immagine jumbotron -->
-        <img src="img/bg-2.jpg" alt="">
+        <div class="icon-slider">
+          <!-- Vue: icone per cambiare img slider inserite con v-for -->
+          <i v-for="(item, i) in slider" class="fas fa-window-minimize" :class="{active: i == counter}" @click="changeImage(i)"></i>
+        </div>
+        <!-- Vue: aggiunto effetto fade -->
+        <transition-group tag="" name="fade">
+          <!-- Vue: immagini slider inserite con v-for -->
+          <img v-for="(item, i) in slider" v-if="i == counter" :src="'img/' + item.img" :alt="item.title" :key="item">
+        </transition-group>
+        <!-- <img src="img/bg-2.jpg" alt=""> -->
 
         <!-- menu principale -->
         <div class="container">
@@ -72,13 +81,16 @@
           </nav>
         </div>
 
-        <!-- testo sopra a jumbotron -->
-        <div class="jumbotron-text">
-          <h1>Financial Risk</h1>
-          <p>The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
-          <a href="#" class="btn full slide-effect">Get in touch</a>
-          <a href="#" class="btn empty color-effect">Read more</a>
-        </div>
+        <!-- Vue: aggiunto effetto fade -->
+        <transition-group tag="div" name="fade">
+          <!-- Vue: testo dentro a jumbotron stampato con v-for -->
+          <div class="jumbotron-text" v-for="(item, i) in slider" v-if="i == counter" :key="item">
+            <h1>{{ item.title }}</h1>
+            <p>{{ item.subtitle }}</p>
+            <a href="#" class="btn full slide-effect">Get in touch</a>
+            <a href="#" class="btn empty color-effect">Read more</a>
+          </div>
+        <transition-group>
       </div>
       <!-- /jumbotron -->
     </header>
@@ -140,6 +152,9 @@
               <div class="box" v-for="item in services">
                 <div class="icons">
                   <i :class="item.icon" class="white"></i>
+                  <!-- pulse effect -->
+                  <div class="pulse">
+                  </div>
                   <i class="fas fa-arrow-right"></i>
                 </div>
                 <h3>{{ item.name }}</h3>
